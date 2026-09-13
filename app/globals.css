@@ -245,7 +245,8 @@ th{font-family:'IBM Plex Mono',monospace; font-size:11px; text-transform:upperca
 .foundry-home .final-cta .btn-primary{padding:20px 40px; font-size:16px;}
 
 .foundry-home footer{border-top:1px solid var(--line); padding:50px 24px 40px; text-align:center;}
-.foundry-home .footer-mark{width:34px; height:34px; margin:0 auto 24px; border:2px solid var(--gold-deep); display:flex; align-items:center; justify-content:center; font-family:'Anton',sans-serif; color:var(--gold);}
+.foundry-home .footer-mark{width:auto; height:44px; margin:0 auto 24px; display:flex; align-items:center; justify-content:center;}
+.foundry-home .footer-mark img{height:100%; width:auto; display:block;}
 .foundry-home .footer-links{display:flex; justify-content:center; gap:22px; flex-wrap:wrap; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-soft); margin-bottom:20px;}
 .foundry-home .footer-links a{text-decoration:none;}
 .foundry-home .footer-email{font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.05em; color:var(--gold-soft); margin-bottom:16px;}

@@ -228,7 +228,7 @@ export default function HomePage() {
 
       {/* FOOTER */}
       <footer>
-        <div className="footer-mark">F</div>
+        <div className="footer-mark"><img src="/logo-mark.png" alt="The Foundry Network" /></div>
         <div className="footer-links">
           <a href="https://withthefoundry.io/terms">Terms</a>
           <a href="https://withthefoundry.io/privacy">Privacy</a>
