@@ -144,12 +144,6 @@ th{font-family:'IBM Plex Mono',monospace; font-size:11px; text-transform:upperca
 .access-modal .channel-list, .access-modal .confirm-list{ display:flex; flex-direction:column; gap:12px; }
 .access-modal .btn:disabled{ opacity:.35; cursor:not-allowed; }
 .access-modal .cancel-link{ margin-top:18px; background:none; border:none; color:var(--ink-soft); font-size:13px; cursor:pointer; text-decoration:underline; }
-.foundry-home .float-widget{ position:fixed !important; bottom:24px; right:24px; z-index:50 !important; display:flex; align-items:center; gap:12px; background:rgba(7,11,20,0.85); border:1px solid var(--gold-deep); border-radius:10px; padding:10px 14px; -webkit-backdrop-filter:blur(10px); backdrop-filter:blur(10px); box-shadow:0 20px 50px -15px rgba(0,0,0,0.7); }
-.foundry-home .float-widget .price{font-family:'Anton',sans-serif; font-size:20px; color:var(--ink);}
-.foundry-home .float-widget .price span{font-size:11px; color:var(--ink-soft); font-family:'Public Sans',sans-serif; text-transform:none;}
-.foundry-home .float-widget .sub{font-size:10px; color:var(--ink-soft); font-family:'IBM Plex Mono',monospace; text-transform:uppercase;}
-.foundry-home .float-widget .btn{padding:11px 18px; font-size:13px;}
-@media (max-width:640px){ .foundry-home .float-widget{ left:16px; right:16px; justify-content:space-between; } }
 
 .foundry-home .hero{padding:60px 0 40px; text-align:center;}
 .foundry-home .hero-logo{font-family:'Anton', sans-serif; font-size:clamp(36px,7vw,72px); letter-spacing:.04em; color:transparent; -webkit-text-stroke:1.5px var(--gold); line-height:1;}
@@ -168,12 +162,10 @@ th{font-family:'IBM Plex Mono',monospace; font-size:11px; text-transform:upperca
 .foundry-home .rule-fade{height:2px; max-width:900px; margin:34px auto; background:linear-gradient(90deg, var(--brick), var(--gold-bright), var(--brick));}
 .foundry-home .stat-line{font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-soft); text-align:center;}
 
-.foundry-home .float-widget{position:fixed !important; bottom:24px; right:24px; z-index:50 !important; display:flex; align-items:center; gap:12px; background:rgba(7,11,20,0.85); border:1px solid var(--gold-deep); border-radius:10px; padding:10px 14px; -webkit-backdrop-filter:blur(10px); backdrop-filter:blur(10px); box-shadow:0 20px 50px -15px rgba(0,0,0,0.7); transition:opacity .25s ease, transform .25s ease;}
+.foundry-home .float-widget{position:fixed !important; bottom:24px; right:24px; z-index:50 !important; display:flex; align-items:center; gap:14px; background:rgba(7,11,20,0.85); border:1px solid var(--gold-deep); border-radius:10px; padding:10px 12px 10px 16px; -webkit-backdrop-filter:blur(10px); backdrop-filter:blur(10px); box-shadow:0 20px 50px -15px rgba(0,0,0,0.7); transition:opacity .25s ease, transform .25s ease;}
 .foundry-home .float-widget.is-hidden{opacity:0; transform:translateY(14px); pointer-events:none;}
-.foundry-home .float-widget .price{font-family:'Anton',sans-serif; font-size:20px; color:var(--ink);}
-.foundry-home .float-widget .price span{font-size:11px; color:var(--ink-soft); font-family:'Public Sans',sans-serif; text-transform:none;}
-.foundry-home .float-widget .sub{font-size:10px; color:var(--ink-soft); font-family:'IBM Plex Mono',monospace; text-transform:uppercase;}
-.foundry-home .float-widget .btn{padding:11px 18px; font-size:13px;}
+.foundry-home .float-widget .sub{font-size:11px; color:var(--ink-soft); font-family:'IBM Plex Mono',monospace; text-transform:uppercase; letter-spacing:.04em; white-space:nowrap;}
+.foundry-home .float-widget .btn{padding:11px 18px; font-size:13px; white-space:nowrap;}
 @media (max-width:640px){ .foundry-home .float-widget{ left:16px; right:16px; justify-content:space-between; } }
 
 .foundry-home .section{padding:80px 24px;}

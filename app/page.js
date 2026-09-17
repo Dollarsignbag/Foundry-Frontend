@@ -8,7 +8,6 @@ export default function HomePage() {
   const [settings, setSettings] = useState(null);
   const [hideWidget, setHideWidget] = useState(false);
   const videoSectionRef = useRef(null);
-  const pricingSectionRef = useRef(null);
   const finalCtaRef = useRef(null);
 
   useEffect(() => {
@@ -19,7 +18,7 @@ export default function HomePage() {
   // CTA sections are on screen — those sections already have their own
   // strong call to action, so the floating one would be redundant there.
   useEffect(() => {
-    const targets = [videoSectionRef.current, pricingSectionRef.current, finalCtaRef.current].filter(Boolean);
+    const targets = [videoSectionRef.current, finalCtaRef.current].filter(Boolean);
     if (targets.length === 0) return;
 
     const visible = new Set();
@@ -126,33 +125,6 @@ export default function HomePage() {
       </section>
 
       {/* PRICING */}
-      <section className="section pricing-wrap" id="pricing" ref={pricingSectionRef}>
-        <h2>Two Ways In</h2>
-        <p className="lead" style={{ margin: "0 auto" }}>Same network. Pick how you pay.</p>
-
-        <div className="pricing-grid">
-          <div className="price-card yearly">
-            <span className="best-badge">Best Value</span>
-            <div className="plan-label">Yearly</div>
-            <div className="amount">$375</div>
-            <div className="amount-note">$31.25/mo · save $69 · auto-renews annually</div>
-            <p style={{ fontSize: 14, color: "var(--ink-soft)", marginBottom: 14 }}>Everything in monthly, plus:</p>
-            <ul>
-              <li>Every downloadable guide in the Vault, free</li>
-              <li>Full past mastermind recording archive, free</li>
-            </ul>
-            <Link href="/apply" className="btn btn-primary">Start Yearly</Link>
-          </div>
-          <div className="price-card monthly">
-            <div className="plan-label">Month To Month</div>
-            <div className="amount">$37</div>
-            <div className="amount-note">Billed monthly. Cancel anytime.</div>
-            <p style={{ fontSize: 14, color: "var(--ink-soft)", marginBottom: 14 }}>Full network access.</p>
-            <Link href="/apply" className="btn btn-outline">Start Monthly</Link>
-          </div>
-        </div>
-      </section>
-
       {/* NARRATIVE */}
       <section className="narrative">
         <div className="wrap">
@@ -242,10 +214,7 @@ export default function HomePage() {
 
       {/* FLOATING STICKY WIDGET */}
       <div className={`float-widget${hideWidget ? " is-hidden" : ""}`}>
-        <div>
-          <div className="price">{settings?.subscriptionPriceLabel || "$37/mo"}</div>
-          <div className="sub">by application only</div>
-        </div>
+        <div className="sub">by application only</div>
         <Link href="/apply" className="btn btn-primary">GET IN</Link>
       </div>
 
