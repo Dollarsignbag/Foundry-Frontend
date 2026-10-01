@@ -9,9 +9,12 @@ function LoginForm() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
 
   async function submit(e) {
     e.preventDefault();
+    setError("");
+    setLoading(true);
     try {
       const { token, user } = await api("/api/auth/login", {
         method: "POST",
@@ -21,6 +24,8 @@ function LoginForm() {
       router.push(params.get("next") || "/admin");
     } catch (e) {
       setError(e.message);
+    } finally {
+      setLoading(false);
     }
   }
 
@@ -30,10 +35,12 @@ function LoginForm() {
       {error && <div className="error">{error}</div>}
       <form onSubmit={submit}>
         <label>Email</label>
-        <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+        <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required disabled={loading} />
         <label>Password</label>
-        <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
-        <button className="btn btn-primary" style={{ width: "100%" }} type="submit">Sign in</button>
+        <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required disabled={loading} />
+        <button className="btn btn-primary" style={{ width: "100%" }} type="submit" disabled={loading}>
+          {loading ? "Signing in…" : "Sign in"}
+        </button>
       </form>
     </div>
   );
